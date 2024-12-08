@@ -1,0 +1,3 @@
+[submodule "SimpleGraphs"]
+	path = SimpleGraphs
+	url = https://github.com/JovanDjordjevic/SimpleGraphs.git
