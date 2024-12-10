@@ -1,15 +1,15 @@
-# Analiza projekta 'SimpleGraphs'
+# Analysis of project 'SimpleGraphs'
 
-Projekat predstavlja malu, _header-only_ biblioteku implementiranu u _C++_, osmišljenu za kreiranje i izvršavanje različitih algoritama nad grafovima. Primarni cilj ove biblioteke jeste omogućavanje fleksibilnosti u radu sa grafovima, pri čemu čvorovi i grane mogu sadržati različite tipove podataka, dok su svi algoritmi implementirani generički, kako bi se obezbedila široka primena. Dodatno, jedan od ključnih ciljeva projekta jeste obezbeđivanje intuitivnosti i jednostavnosti korišćenja same biblioteke, čime se olakšava njeno razumevanje i primena.
+The project represents a small, _header-only_ library implemented in _C++_, designed for creating and executing various graph algorithms. The primary goal of this library is to provide flexibility in graph handling, allowing nodes and edges to contain different types of data. All algorithms are implemented generically to support a wide range of use cases. Additionally, a key objective is to make the library easy to understand and use.
 
-Izvorni kod projekta - [**Link do repozitorijuma** (_main grana_)](https://github.com/JovanDjordjevic/SimpleGraphs)
+Project source code - [**Link to repo** (_main grana_)](https://github.com/JovanDjordjevic/SimpleGraphs)
 
-Hash kod commit-a : **_af10ed9cee6de73768b772fab3e6829e7dd52026_**
+Commit hash : **_af10ed9cee6de73768b772fab3e6829e7dd52026_**
 
-## Korišćeni alati
+## Used tools
 
-## Zaključak
+## Summary
 
-## Autor
+## Author
 
 **_Pavle Vlajković 1071/2024_**
