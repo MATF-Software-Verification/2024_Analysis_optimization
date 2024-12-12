@@ -1,0 +1,20 @@
+#!/usr/bin/python
+
+import os 
+
+# Usage guide:
+# Place this in your .git folder 
+# If you want certain style you change change arguments of the clang-format call
+
+directoriesToFormat = ['include', 'simpleGraphs', 'tests']
+
+# Traverse allowed directories and look for the files to format 
+for root, dirs, files in os.walk('.'):
+    dirs[:] = [dir for dir in dirs if dir in directoriesToFormat]
+    for name in files:
+        nameString = str(name)
+        if(nameString.endswith('.hpp') or nameString.endswith('.cpp')):
+            os.system('clang-format -style=llvm -i ' + os.path.join(root,name))
+
+print('All sources and headers have been formated')
+exit(0)

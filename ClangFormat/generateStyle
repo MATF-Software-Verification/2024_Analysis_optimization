@@ -1,0 +1,34 @@
+#!/usr/bin/python
+
+import os 
+
+BASED_ON = 'BasedOnStyle: llvm' 
+print(BASED_ON)
+# Add custom changes here 
+print('Generating patches...')
+CONFIG_PATCH = {
+    'IndentWidth' : 4,
+    'ColumnLimit' : 100,
+    # Line breaks and indentation 
+    'BreakBeforeBraces': 'Allman',
+    'AlwaysBreakAfterReturnType': 'TopLevel',
+    'AllowShortFunctionsOnASingleLine': 'false',
+    # Function definitions 
+    'AllowShortFunctionsOnASingleLine': 'None',
+    # Spaces 
+    'SpaceBeforeParens': 'ControlStatements',
+    'SpaceAfterTemplateKeyword': 'true'
+}
+
+print('Generating config file...')
+def generateStyleString(basedOn, configPatch):
+    customStyleString = '-style={\"' + basedOn + ', ' 
+    for key,val in configPatch.items():
+        customStyleString += key + ': ' + str(val) + ', '
+    customStyleString = customStyleString[:-2] + '\"}'
+    return customStyleString
+
+COMMAND = 'clang-format ' + generateStyleString(BASED_ON,CONFIG_PATCH) + ' -dump-config > .clang_format' 
+os.system(COMMAND)
+print('Success, your patched .clang-format file has been generated!')
+exit(0)
