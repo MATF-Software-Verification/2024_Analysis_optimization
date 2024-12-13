@@ -1,0 +1,39 @@
+==58324== Memcheck, a memory error detector
+==58324== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==58324== Using Valgrind-3.22.0 and LibVEX; rerun with -h for copyright info
+==58324== Command: ./tests
+==58324== Parent PID: 51320
+==58324== 
+==58324== Conditional jump or move depends on uninitialised value(s)
+==58324==    at 0x476464: operator>>(std::istream&, CustomClass&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+==58324==    by 0x1F7157: GraphClasses::Graph<CustomClass, float>::readFromTxt(std::filesystem::__cxx11::path const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+==58324==    by 0x1DC22D: test_graph_class_member_functions() (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+==58324==    by 0x1ED9C2: main (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+==58324==  Uninitialised value was created by a stack allocation
+==58324==    at 0x4763CA: operator>>(std::istream&, CustomClass&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+==58324== 
+==58324== Conditional jump or move depends on uninitialised value(s)
+==58324==    at 0x476464: operator>>(std::istream&, CustomClass&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+==58324==    by 0x1F7157: GraphClasses::Graph<CustomClass, float>::readFromTxt(std::filesystem::__cxx11::path const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+==58324==    by 0x1E58DE: test_custom_float_directed_weighted() (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+==58324==    by 0x1EDA07: main (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+==58324==  Uninitialised value was created by a stack allocation
+==58324==    at 0x4763CA: operator>>(std::istream&, CustomClass&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+==58324== 
+==58324== Conditional jump or move depends on uninitialised value(s)
+==58324==    at 0x476464: operator>>(std::istream&, CustomClass&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+==58324==    by 0x1F7157: GraphClasses::Graph<CustomClass, float>::readFromTxt(std::filesystem::__cxx11::path const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+==58324==    by 0x1E8548: test_custom_float_directed_weighted() (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+==58324==    by 0x1EDA07: main (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+==58324==  Uninitialised value was created by a stack allocation
+==58324==    at 0x4763CA: operator>>(std::istream&, CustomClass&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+==58324== 
+==58324== 
+==58324== HEAP SUMMARY:
+==58324==     in use at exit: 0 bytes in 0 blocks
+==58324==   total heap usage: 1,150,251 allocs, 1,150,251 frees, 59,537,241 bytes allocated
+==58324== 
+==58324== All heap blocks were freed -- no leaks are possible
+==58324== 
+==58324== For lists of detected and suppressed errors, rerun with: -s
+==58324== ERROR SUMMARY: 9 errors from 3 contexts (suppressed: 0 from 0)
