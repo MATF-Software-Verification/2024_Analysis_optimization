@@ -1,15 +1,22 @@
 #!/bin/bash
- 
-mkdir build 
 
-cd build 
+# Run this script from root directory
 
-echo 'Running build...'
-cmake -DCMAKE_BUILD_TYPE=Debug ..
+OUTPUT_LOG_FILE_NAME="valgrind-memcheck-out.txt"
 
-make
-
-cd tests 
+if [ ! -d "build" ]; then
+    mkdir build 
+    cd build 
+    echo 'Running build...'
+    cmake -DCMAKE_BUILD_TYPE=Debug ..
+    make
+    cd tests 
+else 
+    echo 'Traversing to test directory'
+    cd ./build/tests 
+fi 
 
 echo 'Running MemChech...'
-valgrind --leak-check=full --track-origins=yes --log-file=valgrind-memcheck-out.tx ./tests 
+valgrind --leak-check=full --track-origins=yes --log-file=${OUTPUT_LOG_FILE_NAME} ./tests 
+
+echo "Output file has been generated '$OUTPUT_LOG_FILE_NAME'" 
