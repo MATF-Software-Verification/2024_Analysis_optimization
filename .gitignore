@@ -33,3 +33,4 @@
 
 # Apple 
 *.DS_STORE
+.vscode
