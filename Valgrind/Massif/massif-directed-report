@@ -1,0 +1,476 @@
+--------------------------------------------------------------------------------
+Command:            ./tests
+Massif arguments:   (none)
+ms_print arguments: massif.out.125047
+--------------------------------------------------------------------------------
+
+
+    KB
+86.29^            #                                                           
+     |           :#  :::   ::  :::  :::      :::::::                          
+     |    @   :: :# ::::::::::::::@::::  ::@::::::::: :::@                    
+     |   :@:::::::#:::::::::::::::@::::@:::@::::@:::@::::@                   :
+     |  ::@:::::::#:::::::::::::::@::::@:::@::::@:::@::::@::::::::::::::::::::
+     |  ::@:::::::#:::::::::::::::@::::@:::@::::@:::@::::@:                  :
+     |  ::@:::::::#:::::::::::::::@::::@:::@::::@:::@::::@:                  :
+     |  ::@:::::::#:::::::::::::::@::::@:::@::::@:::@::::@:                  :
+     |  ::@:::::::#:::::::::::::::@::::@:::@::::@:::@::::@:                  :
+     |  ::@:::::::#:::::::::::::::@::::@:::@::::@:::@::::@:                  :
+     |  ::@:::::::#:::::::::::::::@::::@:::@::::@:::@::::@:                  :
+     |  ::@:::::::#:::::::::::::::@::::@:::@::::@:::@::::@:                  :
+     |  ::@:::::::#:::::::::::::::@::::@:::@::::@:::@::::@:                  :
+     |  ::@:::::::#:::::::::::::::@::::@:::@::::@:::@::::@:                  :
+     |  ::@:::::::#:::::::::::::::@::::@:::@::::@:::@::::@:                  :
+     |  ::@:::::::#:::::::::::::::@::::@:::@::::@:::@::::@:                  :
+     |  ::@:::::::#:::::::::::::::@::::@:::@::::@:::@::::@:                  :
+     |  ::@:::::::#:::::::::::::::@::::@:::@::::@:::@::::@:                  :
+     |  ::@:::::::#:::::::::::::::@::::@:::@::::@:::@::::@:                  :
+     |  ::@:::::::#:::::::::::::::@::::@:::@::::@:::@::::@:                  :
+   0 +----------------------------------------------------------------------->Mi
+     0                                                                   62.64
+
+Number of snapshots: 94
+ Detailed snapshots: [3, 16 (peak), 41, 50, 60, 70, 80, 90]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1      2,529,564           73,736           73,728             8            0
+  2      3,064,006           79,160           78,224           936            0
+  3      3,908,313           80,048           79,212           836            0
+98.96% (79,212B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->92.10% (73,728B) 0x491E38E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->92.10% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->92.10% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->92.10% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->92.10% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->03.11% (2,492B) in 19 places, all below massif's threshold (1.00%)
+| 
+->01.28% (1,024B) 0x4B981A4: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.28% (1,024B) 0x4BA8513: _IO_doallocbuf (genops.c:347)
+|   ->01.28% (1,024B) 0x4BA5F7F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->01.28% (1,024B) 0x4BA6A9E: _IO_new_file_xsputn (fileops.c:1244)
+|       ->01.28% (1,024B) 0x4BA6A9E: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->01.28% (1,024B) 0x4B99A01: fwrite (iofwrite.c:39)
+|           ->01.28% (1,024B) 0x49BDDC3: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+|             ->01.28% (1,024B) 0x49BE13B: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+|               ->01.28% (1,024B) 0x1E57C3: test_custom_float_directed_weighted() (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|                 ->01.28% (1,024B) 0x1ED9AB: main (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|                   
+->01.26% (1,008B) 0x43350A: std::__new_allocator<CustomClass>::allocate(unsigned long, void const*) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| ->01.26% (1,008B) 0x3B75F9: std::_Deque_base<CustomClass, std::allocator<CustomClass> >::_M_allocate_node() (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| | ->01.26% (1,008B) 0x3B5FFE: std::_Deque_base<CustomClass, std::allocator<CustomClass> >::_M_create_nodes(CustomClass**, CustomClass**) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| |   ->01.26% (1,008B) 0x363665: std::_Deque_base<CustomClass, std::allocator<CustomClass> >::_M_initialize_map(unsigned long) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| |     ->01.26% (1,008B) 0x314C13: std::_Deque_base<CustomClass, std::allocator<CustomClass> >::_Deque_base() (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| |       ->01.26% (1,008B) 0x290C3D: std::deque<CustomClass, std::allocator<CustomClass> >::deque() (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| |         ->01.26% (1,008B) in 2 places, all below massif's threshold (1.00%)
+| |           
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.20% (960B) 0x437BC3: std::__new_allocator<std::__detail::_Hash_node<std::pair<CustomClass const, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > > >, true> >::allocate(unsigned long, void const*) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+  ->01.20% (960B) in 2 places, all below massif's threshold (1.00%)
+    
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  4      4,537,279           81,328           80,264         1,064            0
+  5      5,098,037           78,448           77,716           732            0
+  6      5,499,371           78,160           77,592           568            0
+  7      6,131,208           76,824           76,408           416            0
+  8      6,637,061           78,272           77,568           704            0
+  9      7,446,275           80,368           79,208         1,160            0
+ 10      8,084,607           79,576           78,696           880            0
+ 11      8,764,422           80,304           79,264         1,040            0
+ 12      9,236,302           79,248           78,360           888            0
+ 13     10,044,133           83,024           81,392         1,632            0
+ 14     10,460,522           84,456           82,484         1,972            0
+ 15     10,995,464           85,560           83,376         2,184            0
+ 16     11,659,295           88,360           85,492         2,868            0
+96.75% (85,492B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->83.44% (73,728B) 0x491E38E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->83.44% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->83.44% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->83.44% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->83.44% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->02.69% (2,380B) 0x3F2F13: std::__new_allocator<int>::allocate(unsigned long, void const*) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| ->02.69% (2,380B) 0x352820: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|   ->02.69% (2,380B) 0x352A56: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|     ->02.69% (2,380B) 0x476541: std::vector<int, std::allocator<int> >::push_back(int const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|       ->02.63% (2,320B) 0x475FB0: CustomClass::CustomClass(CustomClass const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|       | ->02.63% (2,320B) in 40 places, all below massif's threshold (1.00%)
+|       |   
+|       ->00.07% (60B) in 1+ places, all below ms_print's threshold (01.00%)
+|       
+->02.53% (2,232B) 0x43608F: std::__new_allocator<std::__detail::_Hash_node<std::pair<CustomClass const, std::pair<std::vector<CustomClass, std::allocator<CustomClass> >, float> >, true> >::allocate(unsigned long, void const*) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| ->02.53% (2,232B) 0x3B7B8F: std::__detail::_Hash_node<std::pair<CustomClass const, std::pair<std::vector<CustomClass, std::allocator<CustomClass> >, float> >, true>* std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<CustomClass const, std::pair<std::vector<CustomClass, std::allocator<CustomClass> >, float> >, true> > >::_M_allocate_node<std::piecewise_construct_t const&, std::tuple<CustomClass const&>, std::tuple<> >(std::piecewise_construct_t const&, std::tuple<CustomClass const&>&&, std::tuple<>&&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|   ->02.53% (2,232B) 0x3652C4: std::_Hashtable<CustomClass, std::pair<CustomClass const, std::pair<std::vector<CustomClass, std::allocator<CustomClass> >, float> >, std::allocator<std::pair<CustomClass const, std::pair<std::vector<CustomClass, std::allocator<CustomClass> >, float> > >, std::__detail::_Select1st, std::equal_to<CustomClass>, std::hash<CustomClass>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Scoped_node::_Scoped_node<std::piecewise_construct_t const&, std::tuple<CustomClass const&>, std::tuple<> >(std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<CustomClass const, std::pair<std::vector<CustomClass, std::allocator<CustomClass> >, float> >, true> > >*, std::piecewise_construct_t const&, std::tuple<CustomClass const&>&&, std::tuple<>&&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|     ->02.53% (2,232B) 0x3177C6: std::__detail::_Map_base<CustomClass, std::pair<CustomClass const, std::pair<std::vector<CustomClass, std::allocator<CustomClass> >, float> >, std::allocator<std::pair<CustomClass const, std::pair<std::vector<CustomClass, std::allocator<CustomClass> >, float> > >, std::__detail::_Select1st, std::equal_to<CustomClass>, std::hash<CustomClass>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true>, true>::operator[](CustomClass const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|       ->02.53% (2,232B) 0x296B00: std::unordered_map<CustomClass, std::pair<std::vector<CustomClass, std::allocator<CustomClass> >, float>, std::hash<CustomClass>, std::equal_to<CustomClass>, std::allocator<std::pair<CustomClass const, std::pair<std::vector<CustomClass, std::allocator<CustomClass> >, float> > > >::operator[](CustomClass const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|         ->02.04% (1,800B) 0x2977B6: std::unordered_map<CustomClass, std::pair<std::vector<CustomClass, std::allocator<CustomClass> >, float>, std::hash<CustomClass>, std::equal_to<CustomClass>, std::allocator<std::pair<CustomClass const, std::pair<std::vector<CustomClass, std::allocator<CustomClass> >, float> > > > GraphAlgorithms::dijkstraAllShortestPathsFromStart<CustomClass, float>(GraphClasses::Graph<CustomClass, float> const&, CustomClass const&, GraphAlgorithms::AlgorithmBehavior, std::ostream&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|         | ->02.04% (1,800B) 0x29B451: std::unordered_map<CustomClass, std::unordered_map<CustomClass, std::pair<std::vector<CustomClass, std::allocator<CustomClass> >, float>, std::hash<CustomClass>, std::equal_to<CustomClass>, std::allocator<std::pair<CustomClass const, std::pair<std::vector<CustomClass, std::allocator<CustomClass> >, float> > > >, std::hash<CustomClass>, std::equal_to<CustomClass>, std::allocator<std::pair<CustomClass const, std::unordered_map<CustomClass, std::pair<std::vector<CustomClass, std::allocator<CustomClass> >, float>, std::hash<CustomClass>, std::equal_to<CustomClass>, std::allocator<std::pair<CustomClass const, std::pair<std::vector<CustomClass, std::allocator<CustomClass> >, float> > > > > > > GraphAlgorithms::johnsonAllShortestsPaths<CustomClass, float>(GraphClasses::Graph<CustomClass, float> const&, std::optional<CustomClass> const&, GraphAlgorithms::AlgorithmBehavior, std::ostream&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|         | | ->02.04% (1,800B) 0x210E50: void test_johnsonAllShortestsPaths<CustomClass, float>(GraphClasses::Graph<CustomClass, float>&, CustomClass, CustomClass, unsigned long, float) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|         | |   ->02.04% (1,800B) 0x1E6983: test_custom_float_directed_weighted() (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|         | |     ->02.04% (1,800B) 0x1ED9AB: main (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|         | |       
+|         | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|         | 
+|         ->00.49% (432B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->01.77% (1,560B) 0x445DC5: std::__new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| ->01.77% (1,560B) in 10 places, all below massif's threshold (1.00%)
+|   
+->01.45% (1,280B) 0x437BC3: std::__new_allocator<std::__detail::_Hash_node<std::pair<CustomClass const, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > > >, true> >::allocate(unsigned long, void const*) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| ->01.09% (960B) 0x405497: std::__detail::_Hash_node<std::pair<CustomClass const, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > > >, true>* std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<CustomClass const, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > > >, true> > >::_M_allocate_node<std::pair<CustomClass const, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > > > const&>(std::pair<CustomClass const, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > > > const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| | ->01.09% (960B) 0x3B6694: std::__detail::_Hash_node<std::pair<CustomClass const, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > > >, true>* std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<std::pair<CustomClass const, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > > >, true> > >::operator()<std::pair<CustomClass const, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > > > const&>(std::pair<CustomClass const, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > > > const&) const (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| |   ->01.09% (960B) in 2 places, all below massif's threshold (1.00%)
+| |     
+| ->00.36% (320B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.43% (1,264B) in 19 places, all below massif's threshold (1.00%)
+| 
+->01.28% (1,128B) 0x43350A: std::__new_allocator<CustomClass>::allocate(unsigned long, void const*) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| ->01.28% (1,128B) 0x3B2036: std::_Vector_base<CustomClass, std::allocator<CustomClass> >::_M_allocate(unsigned long) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| | ->01.28% (1,128B) 0x35F3F9: void std::vector<CustomClass, std::allocator<CustomClass> >::_M_realloc_insert<CustomClass&>(__gnu_cxx::__normal_iterator<CustomClass*, std::vector<CustomClass, std::allocator<CustomClass> > >, CustomClass&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| | | ->01.28% (1,128B) 0x311A67: CustomClass& std::vector<CustomClass, std::allocator<CustomClass> >::emplace_back<CustomClass&>(CustomClass&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| | |   ->01.28% (1,128B) in 6 places, all below massif's threshold (1.00%)
+| | |     
+| | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| | 
+| ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.16% (1,024B) 0x4B981A4: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.16% (1,024B) 0x4BA8513: _IO_doallocbuf (genops.c:347)
+|   ->01.16% (1,024B) 0x4BA5F7F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->01.16% (1,024B) 0x4BA6A9E: _IO_new_file_xsputn (fileops.c:1244)
+|       ->01.16% (1,024B) 0x4BA6A9E: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->01.16% (1,024B) 0x4B99A01: fwrite (iofwrite.c:39)
+|           ->01.16% (1,024B) 0x49BDDC3: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+|             ->01.16% (1,024B) 0x49BE13B: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+|               ->01.16% (1,024B) 0x1E57C3: test_custom_float_directed_weighted() (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|                 ->01.16% (1,024B) 0x1ED9AB: main (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|                   
+->01.01% (896B) 0x40978B: std::__new_allocator<GraphClasses::Edge<CustomClass, float> >::allocate(unsigned long, void const*) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+  ->01.01% (896B) 0x36B82A: std::_Vector_base<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > >::_M_allocate(unsigned long) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+    ->01.01% (896B) in 5 places, all below massif's threshold (1.00%)
+      
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 17     12,383,964           77,368           76,860           508            0
+ 18     13,083,935           79,440           78,512           928            0
+ 19     13,608,794           83,256           81,564         1,692            0
+ 20     14,257,112           84,432           82,468         1,964            0
+ 21     14,903,780           83,632           81,848         1,784            0
+ 22     15,424,606           87,832           85,120         2,712            0
+ 23     15,950,574           85,664           83,264         2,400            0
+ 24     16,734,198           83,880           81,944         1,936            0
+ 25     17,383,649           78,256           77,596           660            0
+ 26     18,206,162           82,928           81,324         1,604            0
+ 27     18,851,104           83,760           81,972         1,788            0
+ 28     19,681,538           85,760           83,524         2,236            0
+ 29     20,120,267           83,576           81,752         1,824            0
+ 30     20,557,865           85,760           83,524         2,236            0
+ 31     20,990,985           81,256           80,048         1,208            0
+ 32     21,425,692           82,592           81,076         1,516            0
+ 33     21,858,771           81,688           80,376         1,312            0
+ 34     22,292,388           81,384           80,140         1,244            0
+ 35     22,726,890           83,296           81,684         1,612            0
+ 36     23,377,059           85,032           82,932         2,100            0
+ 37     24,243,742           86,072           83,748         2,324            0
+ 38     24,679,412           85,752           83,520         2,232            0
+ 39     25,114,116           80,640           79,564         1,076            0
+ 40     25,548,140           83,048           81,476         1,572            0
+ 41     25,981,752           81,784           80,464         1,320            0
+98.39% (80,464B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->90.15% (73,728B) 0x491E38E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->90.15% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->90.15% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->90.15% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->90.15% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->01.53% (1,248B) 0x445DC5: std::__new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| ->01.53% (1,248B) in 10 places, all below massif's threshold (1.00%)
+|   
+->01.47% (1,200B) 0x436A58: std::__new_allocator<std::__detail::_Hash_node<std::pair<CustomClass const, float>, true> >::allocate(unsigned long, void const*) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| ->01.47% (1,200B) 0x3BA899: std::__detail::_Hash_node<std::pair<CustomClass const, float>, true>* std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<CustomClass const, float>, true> > >::_M_allocate_node<std::piecewise_construct_t const&, std::tuple<CustomClass const&>, std::tuple<> >(std::piecewise_construct_t const&, std::tuple<CustomClass const&>&&, std::tuple<>&&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|   ->01.47% (1,200B) 0x366A74: std::_Hashtable<CustomClass, std::pair<CustomClass const, float>, std::allocator<std::pair<CustomClass const, float> >, std::__detail::_Select1st, std::equal_to<CustomClass>, std::hash<CustomClass>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Scoped_node::_Scoped_node<std::piecewise_construct_t const&, std::tuple<CustomClass const&>, std::tuple<> >(std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<CustomClass const, float>, true> > >*, std::piecewise_construct_t const&, std::tuple<CustomClass const&>&&, std::tuple<>&&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|     ->01.47% (1,200B) 0x318726: std::__detail::_Map_base<CustomClass, std::pair<CustomClass const, float>, std::allocator<std::pair<CustomClass const, float> >, std::__detail::_Select1st, std::equal_to<CustomClass>, std::hash<CustomClass>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true>, true>::operator[](CustomClass const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|       ->01.47% (1,200B) 0x299FC2: std::unordered_map<CustomClass, float, std::hash<CustomClass>, std::equal_to<CustomClass>, std::allocator<std::pair<CustomClass const, float> > >::operator[](CustomClass const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|         ->01.47% (1,200B) 0x28CFC2: std::unordered_map<CustomClass, std::unordered_map<CustomClass, float, std::hash<CustomClass>, std::equal_to<CustomClass>, std::allocator<std::pair<CustomClass const, float> > >, std::hash<CustomClass>, std::equal_to<CustomClass>, std::allocator<std::pair<CustomClass const, std::unordered_map<CustomClass, float, std::hash<CustomClass>, std::equal_to<CustomClass>, std::allocator<std::pair<CustomClass const, float> > > > > > GraphAlgorithms::floydWarshallAllShortestPaths<CustomClass, float>(GraphClasses::Graph<CustomClass, float> const&, GraphAlgorithms::AlgorithmBehavior, std::ostream&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|         | ->01.47% (1,200B) 0x211F38: void test_all_path_algs_equivalence<CustomClass, float>(GraphClasses::Graph<CustomClass, float>&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|         | | ->01.47% (1,200B) 0x1E6AFD: test_custom_float_directed_weighted() (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|         | |   ->01.47% (1,200B) 0x1ED9AB: main (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|         | |     
+|         | ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|         | 
+|         ->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+|         
+->01.46% (1,192B) in 21 places, all below massif's threshold (1.00%)
+| 
+->01.32% (1,080B) 0x43608F: std::__new_allocator<std::__detail::_Hash_node<std::pair<CustomClass const, std::pair<std::vector<CustomClass, std::allocator<CustomClass> >, float> >, true> >::allocate(unsigned long, void const*) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| ->01.32% (1,080B) 0x3B7B8F: std::__detail::_Hash_node<std::pair<CustomClass const, std::pair<std::vector<CustomClass, std::allocator<CustomClass> >, float> >, true>* std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<CustomClass const, std::pair<std::vector<CustomClass, std::allocator<CustomClass> >, float> >, true> > >::_M_allocate_node<std::piecewise_construct_t const&, std::tuple<CustomClass const&>, std::tuple<> >(std::piecewise_construct_t const&, std::tuple<CustomClass const&>&&, std::tuple<>&&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|   ->01.32% (1,080B) 0x3652C4: std::_Hashtable<CustomClass, std::pair<CustomClass const, std::pair<std::vector<CustomClass, std::allocator<CustomClass> >, float> >, std::allocator<std::pair<CustomClass const, std::pair<std::vector<CustomClass, std::allocator<CustomClass> >, float> > >, std::__detail::_Select1st, std::equal_to<CustomClass>, std::hash<CustomClass>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Scoped_node::_Scoped_node<std::piecewise_construct_t const&, std::tuple<CustomClass const&>, std::tuple<> >(std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<CustomClass const, std::pair<std::vector<CustomClass, std::allocator<CustomClass> >, float> >, true> > >*, std::piecewise_construct_t const&, std::tuple<CustomClass const&>&&, std::tuple<>&&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|     ->01.32% (1,080B) 0x3177C6: std::__detail::_Map_base<CustomClass, std::pair<CustomClass const, std::pair<std::vector<CustomClass, std::allocator<CustomClass> >, float> >, std::allocator<std::pair<CustomClass const, std::pair<std::vector<CustomClass, std::allocator<CustomClass> >, float> > >, std::__detail::_Select1st, std::equal_to<CustomClass>, std::hash<CustomClass>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true>, true>::operator[](CustomClass const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|       ->01.32% (1,080B) 0x296B00: std::unordered_map<CustomClass, std::pair<std::vector<CustomClass, std::allocator<CustomClass> >, float>, std::hash<CustomClass>, std::equal_to<CustomClass>, std::allocator<std::pair<CustomClass const, std::pair<std::vector<CustomClass, std::allocator<CustomClass> >, float> > > >::operator[](CustomClass const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|         ->01.32% (1,080B) in 3 places, all below massif's threshold (1.00%)
+|           
+->01.25% (1,024B) 0x4B981A4: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.25% (1,024B) 0x4BA8513: _IO_doallocbuf (genops.c:347)
+|   ->01.25% (1,024B) 0x4BA5F7F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->01.25% (1,024B) 0x4BA6A9E: _IO_new_file_xsputn (fileops.c:1244)
+|       ->01.25% (1,024B) 0x4BA6A9E: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->01.25% (1,024B) 0x4B99A01: fwrite (iofwrite.c:39)
+|           ->01.25% (1,024B) 0x49BDDC3: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+|             ->01.25% (1,024B) 0x49BE13B: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+|               ->01.25% (1,024B) 0x1E57C3: test_custom_float_directed_weighted() (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|                 ->01.25% (1,024B) 0x1ED9AB: main (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|                   
+->01.21% (992B) 0x3F2F13: std::__new_allocator<int>::allocate(unsigned long, void const*) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+  ->01.21% (992B) 0x352820: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+    ->01.21% (992B) 0x352A56: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+      ->01.21% (992B) 0x476541: std::vector<int, std::allocator<int> >::push_back(int const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+        ->01.17% (960B) 0x475FB0: CustomClass::CustomClass(CustomClass const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+        | ->01.17% (960B) in 46 places, all below massif's threshold (1.00%)
+        |   
+        ->00.04% (32B) in 1+ places, all below ms_print's threshold (01.00%)
+        
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 42     26,650,507           81,584           80,320         1,264            0
+ 43     27,087,580           83,392           81,808         1,584            0
+ 44     27,953,946           84,896           82,816         2,080            0
+ 45     28,388,298           85,816           83,524         2,292            0
+ 46     28,821,373           83,832           81,932         1,900            0
+ 47     29,257,916           85,240           83,076         2,164            0
+ 48     29,691,425           76,272           75,956           316            0
+ 49     30,127,317           77,960           77,340           620            0
+ 50     30,528,907           77,984           77,348           636            0
+99.18% (77,348B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->94.54% (73,728B) 0x491E38E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->94.54% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->94.54% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->94.54% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->94.54% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->03.33% (2,596B) in 27 places, all below massif's threshold (1.00%)
+| 
+->01.31% (1,024B) 0x4B981A4: _IO_file_doallocate (filedoalloc.c:101)
+  ->01.31% (1,024B) 0x4BA8513: _IO_doallocbuf (genops.c:347)
+    ->01.31% (1,024B) 0x4BA5F7F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+      ->01.31% (1,024B) 0x4BA6A9E: _IO_new_file_xsputn (fileops.c:1244)
+        ->01.31% (1,024B) 0x4BA6A9E: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+          ->01.31% (1,024B) 0x4B99A01: fwrite (iofwrite.c:39)
+            ->01.31% (1,024B) 0x49BDDC3: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+              ->01.31% (1,024B) 0x49BE13B: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+                ->01.31% (1,024B) 0x1E57C3: test_custom_float_directed_weighted() (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+                  ->01.31% (1,024B) 0x1ED9AB: main (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+                    
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 51     30,930,546           78,544           77,788           756            0
+ 52     31,332,142           77,560           77,048           512            0
+ 53     31,736,765           79,296           78,504           792            0
+ 54     32,138,519           78,208           77,640           568            0
+ 55     32,540,001           80,096           79,236           860            0
+ 56     32,941,595           80,960           79,892         1,068            0
+ 57     33,343,438           76,536           76,156           380            0
+ 58     33,744,836           81,192           80,032         1,160            0
+ 59     34,146,993           80,600           79,592         1,008            0
+ 60     34,548,623           83,240           81,720         1,520            0
+98.17% (81,720B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->88.57% (73,728B) 0x491E38E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->88.57% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->88.57% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->88.57% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->88.57% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->02.60% (2,168B) in 24 places, all below massif's threshold (1.00%)
+| 
+->02.25% (1,872B) 0x436A58: std::__new_allocator<std::__detail::_Hash_node<std::pair<CustomClass const, float>, true> >::allocate(unsigned long, void const*) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| ->02.25% (1,872B) 0x3BA899: std::__detail::_Hash_node<std::pair<CustomClass const, float>, true>* std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<CustomClass const, float>, true> > >::_M_allocate_node<std::piecewise_construct_t const&, std::tuple<CustomClass const&>, std::tuple<> >(std::piecewise_construct_t const&, std::tuple<CustomClass const&>&&, std::tuple<>&&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|   ->02.25% (1,872B) 0x366A74: std::_Hashtable<CustomClass, std::pair<CustomClass const, float>, std::allocator<std::pair<CustomClass const, float> >, std::__detail::_Select1st, std::equal_to<CustomClass>, std::hash<CustomClass>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Scoped_node::_Scoped_node<std::piecewise_construct_t const&, std::tuple<CustomClass const&>, std::tuple<> >(std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<CustomClass const, float>, true> > >*, std::piecewise_construct_t const&, std::tuple<CustomClass const&>&&, std::tuple<>&&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|     ->02.25% (1,872B) 0x318726: std::__detail::_Map_base<CustomClass, std::pair<CustomClass const, float>, std::allocator<std::pair<CustomClass const, float> >, std::__detail::_Select1st, std::equal_to<CustomClass>, std::hash<CustomClass>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true>, true>::operator[](CustomClass const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|       ->02.25% (1,872B) 0x299FC2: std::unordered_map<CustomClass, float, std::hash<CustomClass>, std::equal_to<CustomClass>, std::allocator<std::pair<CustomClass const, float> > >::operator[](CustomClass const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|         ->02.25% (1,872B) in 17 places, all below massif's threshold (1.00%)
+|           
+->02.00% (1,664B) 0x445DC5: std::__new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| ->01.12% (936B) 0x4523AB: std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<CustomClass const, float>, true> > >::_M_allocate_buckets(unsigned long) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| | ->01.12% (936B) 0x436BD2: std::_Hashtable<CustomClass, std::pair<CustomClass const, float>, std::allocator<std::pair<CustomClass const, float> >, std::__detail::_Select1st, std::equal_to<CustomClass>, std::hash<CustomClass>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_allocate_buckets(unsigned long) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| |   ->01.12% (936B) 0x407604: std::_Hashtable<CustomClass, std::pair<CustomClass const, float>, std::allocator<std::pair<CustomClass const, float> >, std::__detail::_Select1st, std::equal_to<CustomClass>, std::hash<CustomClass>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_rehash_aux(unsigned long, std::integral_constant<bool, true>) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| |     ->01.12% (936B) 0x3BAE51: std::_Hashtable<CustomClass, std::pair<CustomClass const, float>, std::allocator<std::pair<CustomClass const, float> >, std::__detail::_Select1st, std::equal_to<CustomClass>, std::hash<CustomClass>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_rehash(unsigned long, unsigned long const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| |       ->01.12% (936B) 0x366BF1: std::_Hashtable<CustomClass, std::pair<CustomClass const, float>, std::allocator<std::pair<CustomClass const, float> >, std::__detail::_Select1st, std::equal_to<CustomClass>, std::hash<CustomClass>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_M_insert_unique_node(unsigned long, unsigned long, std::__detail::_Hash_node<std::pair<CustomClass const, float>, true>*, unsigned long) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| |         ->01.12% (936B) 0x318756: std::__detail::_Map_base<CustomClass, std::pair<CustomClass const, float>, std::allocator<std::pair<CustomClass const, float> >, std::__detail::_Select1st, std::equal_to<CustomClass>, std::hash<CustomClass>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true>, true>::operator[](CustomClass const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| |           ->01.12% (936B) 0x299FC2: std::unordered_map<CustomClass, float, std::hash<CustomClass>, std::equal_to<CustomClass>, std::allocator<std::pair<CustomClass const, float> > >::operator[](CustomClass const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| |             ->01.12% (936B) in 11 places, all below massif's threshold (1.00%)
+| |               
+| ->00.87% (728B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.52% (1,264B) 0x3F2F13: std::__new_allocator<int>::allocate(unsigned long, void const*) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| ->01.52% (1,264B) 0x352820: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|   ->01.52% (1,264B) 0x352A56: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|     ->01.52% (1,264B) 0x476541: std::vector<int, std::allocator<int> >::push_back(int const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|       ->01.48% (1,232B) 0x475FB0: CustomClass::CustomClass(CustomClass const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|       | ->01.48% (1,232B) in 58 places, all below massif's threshold (1.00%)
+|       |   
+|       ->00.04% (32B) in 1+ places, all below ms_print's threshold (01.00%)
+|       
+->01.23% (1,024B) 0x4B981A4: _IO_file_doallocate (filedoalloc.c:101)
+  ->01.23% (1,024B) 0x4BA8513: _IO_doallocbuf (genops.c:347)
+    ->01.23% (1,024B) 0x4BA5F7F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+      ->01.23% (1,024B) 0x4BA6A9E: _IO_new_file_xsputn (fileops.c:1244)
+        ->01.23% (1,024B) 0x4BA6A9E: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+          ->01.23% (1,024B) 0x4B99A01: fwrite (iofwrite.c:39)
+            ->01.23% (1,024B) 0x49BDDC3: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+              ->01.23% (1,024B) 0x49BE13B: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+                ->01.23% (1,024B) 0x1E57C3: test_custom_float_directed_weighted() (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+                  ->01.23% (1,024B) 0x1ED9AB: main (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+                    
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 61     34,950,287           80,576           79,540         1,036            0
+ 62     35,351,712           79,800           78,888           912            0
+ 63     35,764,728           84,344           82,632         1,712            0
+ 64     36,212,822           85,632           83,680         1,952            0
+ 65     36,619,843           85,648           83,704         1,944            0
+ 66     37,021,324           81,296           80,196         1,100            0
+ 67     37,422,808           79,016           78,208           808            0
+ 68     37,824,437           84,752           82,976         1,776            0
+ 69     38,226,094           80,552           79,536         1,016            0
+ 70     38,627,567           79,168           78,360           808            0
+98.98% (78,360B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->93.13% (73,728B) 0x491E38E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->93.13% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->93.13% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->93.13% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->93.13% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->01.93% (1,528B) in 25 places, all below massif's threshold (1.00%)
+| 
+->01.62% (1,280B) 0x437BC3: std::__new_allocator<std::__detail::_Hash_node<std::pair<CustomClass const, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > > >, true> >::allocate(unsigned long, void const*) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| ->01.21% (960B) 0x405497: std::__detail::_Hash_node<std::pair<CustomClass const, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > > >, true>* std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<CustomClass const, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > > >, true> > >::_M_allocate_node<std::pair<CustomClass const, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > > > const&>(std::pair<CustomClass const, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > > > const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| | ->01.21% (960B) 0x3B6694: std::__detail::_Hash_node<std::pair<CustomClass const, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > > >, true>* std::__detail::_AllocNode<std::allocator<std::__detail::_Hash_node<std::pair<CustomClass const, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > > >, true> > >::operator()<std::pair<CustomClass const, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > > > const&>(std::pair<CustomClass const, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > > > const&) const (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| |   ->01.21% (960B) in 2 places, all below massif's threshold (1.00%)
+| |     
+| ->00.40% (320B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.29% (1,024B) 0x4B981A4: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.29% (1,024B) 0x4BA8513: _IO_doallocbuf (genops.c:347)
+|   ->01.29% (1,024B) 0x4BA5F7F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->01.29% (1,024B) 0x4BA6A9E: _IO_new_file_xsputn (fileops.c:1244)
+|       ->01.29% (1,024B) 0x4BA6A9E: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->01.29% (1,024B) 0x4B99A01: fwrite (iofwrite.c:39)
+|           ->01.29% (1,024B) 0x49BDDC3: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+|             ->01.29% (1,024B) 0x49BE13B: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+|               ->01.29% (1,024B) 0x1E57C3: test_custom_float_directed_weighted() (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|                 ->01.29% (1,024B) 0x1ED9AB: main (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|                   
+->01.01% (800B) 0x40978B: std::__new_allocator<GraphClasses::Edge<CustomClass, float> >::allocate(unsigned long, void const*) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+  ->01.01% (800B) 0x36B82A: std::_Vector_base<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > >::_M_allocate(unsigned long) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+    ->01.01% (800B) in 5 places, all below massif's threshold (1.00%)
+      
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 71     39,030,491           84,184           82,504         1,680            0
+ 72     39,474,567           85,648           83,680         1,968            0
+ 73     39,875,993           85,672           83,688         1,984            0
+ 74     40,277,487           84,232           82,552         1,680            0
+ 75     40,679,310           81,656           80,424         1,232            0
+ 76     41,082,231           82,832           81,416         1,416            0
+ 77     41,483,642           84,696           82,952         1,744            0
+ 78     41,885,138           81,768           80,500         1,268            0
+ 79     42,287,216           83,328           81,796         1,532            0
+ 80     42,688,883           75,912           75,648           264            0
+99.65% (75,648B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->97.12% (73,728B) 0x491E38E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->97.12% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->97.12% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->97.12% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->97.12% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->01.35% (1,024B) 0x4B981A4: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.35% (1,024B) 0x4BA8513: _IO_doallocbuf (genops.c:347)
+|   ->01.35% (1,024B) 0x4BA5F7F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->01.35% (1,024B) 0x4BA6A9E: _IO_new_file_xsputn (fileops.c:1244)
+|       ->01.35% (1,024B) 0x4BA6A9E: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->01.35% (1,024B) 0x4B99A01: fwrite (iofwrite.c:39)
+|           ->01.35% (1,024B) 0x49BDDC3: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+|             ->01.35% (1,024B) 0x49BE13B: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+|               ->01.35% (1,024B) 0x1E57C3: test_custom_float_directed_weighted() (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|                 ->01.35% (1,024B) 0x1ED9AB: main (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|                   
+->01.18% (896B) in 27 places, all below massif's threshold (1.00%)
+  
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 81     43,090,309           77,040           76,600           440            0
+ 82     43,491,738           77,416           76,888           528            0
+ 83     43,893,254           78,320           77,632           688            0
+ 84     44,295,865           79,904           78,952           952            0
+ 85     44,697,337           81,816           80,528         1,288            0
+ 86     45,098,796           79,672           78,732           940            0
+ 87     45,500,266           79,176           78,312           864            0
+ 88     45,901,671           82,960           81,448         1,512            0
+ 89     46,303,171           83,416           81,788         1,628            0
+ 90     46,704,728           81,160           79,944         1,216            0
+98.50% (79,944B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->90.84% (73,728B) 0x491E38E: ??? (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+| ->90.84% (73,728B) 0x400571E: call_init.part.0 (dl-init.c:74)
+|   ->90.84% (73,728B) 0x4005823: call_init (dl-init.c:120)
+|     ->90.84% (73,728B) 0x4005823: _dl_init (dl-init.c:121)
+|       ->90.84% (73,728B) 0x401F59F: ??? (in /usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+|         
+->02.44% (1,984B) 0x437BC3: std::__new_allocator<std::__detail::_Hash_node<std::pair<CustomClass const, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > > >, true> >::allocate(unsigned long, void const*) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| ->02.37% (1,920B) 0x3BFE4F: std::__detail::_Hash_node<std::pair<CustomClass const, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > > >, true>* std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<CustomClass const, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > > >, true> > >::_M_allocate_node<std::piecewise_construct_t const&, std::tuple<CustomClass const&>, std::tuple<> >(std::piecewise_construct_t const&, std::tuple<CustomClass const&>&&, std::tuple<>&&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| | ->02.37% (1,920B) 0x36B2DA: std::_Hashtable<CustomClass, std::pair<CustomClass const, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > > >, std::allocator<std::pair<CustomClass const, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > > > >, std::__detail::_Select1st, std::equal_to<CustomClass>, std::hash<CustomClass>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true> >::_Scoped_node::_Scoped_node<std::piecewise_construct_t const&, std::tuple<CustomClass const&>, std::tuple<> >(std::__detail::_Hashtable_alloc<std::allocator<std::__detail::_Hash_node<std::pair<CustomClass const, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > > >, true> > >*, std::piecewise_construct_t const&, std::tuple<CustomClass const&>&&, std::tuple<>&&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| |   ->02.37% (1,920B) 0x31D8BA: std::__detail::_Map_base<CustomClass, std::pair<CustomClass const, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > > >, std::allocator<std::pair<CustomClass const, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > > > >, std::__detail::_Select1st, std::equal_to<CustomClass>, std::hash<CustomClass>, std::__detail::_Mod_range_hashing, std::__detail::_Default_ranged_hash, std::__detail::_Prime_rehash_policy, std::__detail::_Hashtable_traits<true, false, true>, true>::operator[](CustomClass const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| |     ->02.37% (1,920B) 0x2A4478: std::unordered_map<CustomClass, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > >, std::hash<CustomClass>, std::equal_to<CustomClass>, std::allocator<std::pair<CustomClass const, std::vector<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > > > > >::operator[](CustomClass const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| |       ->01.89% (1,536B) 0x22B2C6: GraphClasses::Graph<CustomClass, float>::addNode(CustomClass const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| |       | ->01.89% (1,536B) in 8 places, all below massif's threshold (1.00%)
+| |       |   
+| |       ->00.47% (384B) in 1+ places, all below ms_print's threshold (01.00%)
+| |       
+| ->00.08% (64B) in 1+ places, all below ms_print's threshold (01.00%)
+| 
+->01.34% (1,088B) 0x3F2F13: std::__new_allocator<int>::allocate(unsigned long, void const*) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| ->01.34% (1,088B) 0x352820: std::_Vector_base<int, std::allocator<int> >::_M_allocate(unsigned long) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|   ->01.34% (1,088B) 0x352A56: void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|     ->01.34% (1,088B) 0x476541: std::vector<int, std::allocator<int> >::push_back(int const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|       ->01.30% (1,056B) 0x475FB0: CustomClass::CustomClass(CustomClass const&) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|       | ->01.30% (1,056B) in 65 places, all below massif's threshold (1.00%)
+|       |   
+|       ->00.04% (32B) in 1+ places, all below ms_print's threshold (01.00%)
+|       
+->01.26% (1,024B) 0x40978B: std::__new_allocator<GraphClasses::Edge<CustomClass, float> >::allocate(unsigned long, void const*) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| ->01.26% (1,024B) 0x36B82A: std::_Vector_base<GraphClasses::Edge<CustomClass, float>, std::allocator<GraphClasses::Edge<CustomClass, float> > >::_M_allocate(unsigned long) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|   ->01.26% (1,024B) in 6 places, all below massif's threshold (1.00%)
+|     
+->01.26% (1,024B) 0x4B981A4: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.26% (1,024B) 0x4BA8513: _IO_doallocbuf (genops.c:347)
+|   ->01.26% (1,024B) 0x4BA5F7F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->01.26% (1,024B) 0x4BA6A9E: _IO_new_file_xsputn (fileops.c:1244)
+|       ->01.26% (1,024B) 0x4BA6A9E: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->01.26% (1,024B) 0x4B99A01: fwrite (iofwrite.c:39)
+|           ->01.26% (1,024B) 0x49BDDC3: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+|             ->01.26% (1,024B) 0x49BE13B: std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.33)
+|               ->01.26% (1,024B) 0x1E57C3: test_custom_float_directed_weighted() (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|                 ->01.26% (1,024B) 0x1ED9AB: main (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+|                   
+->01.15% (936B) 0x445DC5: std::__new_allocator<std::__detail::_Hash_node_base*>::allocate(unsigned long, void const*) (in /home/pavle/Desktop/2024_Analysis_optimization/SimpleGraphs/build/tests/tests)
+| ->01.15% (936B) in 13 places, all below massif's threshold (1.00%)
+|   
+->00.20% (160B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 91     47,106,242           79,024           78,184           840            0
+ 92     47,586,839           74,888           74,857            31            0
+ 93     65,682,661           75,376           75,329            47            0
