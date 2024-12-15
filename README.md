@@ -8,7 +8,16 @@ Commit hash : **_af10ed9cee6de73768b772fab3e6829e7dd52026_**
 
 ## Used tools
 
+Applied tools were:
+- ClangAnalyzer 
+- ClangFormat
+- Massif
+- MemCheck
+- Cppcheck
+
 ## Summary
+
+I've thoroughly analyzed the project _**SimpleGraphs**_ with all of the tools above and i have not found any major bug or some implementation error. The library is well writen without any bug coming up on my error checks.
 
 ## Author
 
