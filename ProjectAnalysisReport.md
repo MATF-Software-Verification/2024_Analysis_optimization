@@ -10,9 +10,9 @@ The tools that were used in this analysis are as follows:
 - Cppcheck
 
 
-## Summary of each check 
+## Summary of each tool 
 
-### ClangAnalyzer 
+### [ClangAnalyzer](https://clang-analyzer.llvm.org/) 
 
 #### Brief summary of the tool 
 
@@ -32,7 +32,7 @@ To run the analysis that i've run execute the [script](./ClangAnalyzer/run-clang
 
 ---
 
-### ClangFormat
+### [ClangFormat](https://clang.llvm.org/docs/ClangFormat.html)
 
 #### Brief summary of the tool
  
@@ -51,5 +51,19 @@ The Python script then generates patched style and applies it to code.
 Run the [generator](./ClangFormat/generateStyle) to generate and apply the format to the code.
 
 I've decided to also include small `git pre-commit hook` that will apply ***Lllvm*** style to the code before every single ***commit***
+
+---
+
+### [Valgrind](https://valgrind.org/) 
+
+***Valgrind, as a base framework***,  provides essential tools for memory debugging, error detection, and performance profiling. It serves as the foundation for specialized utilities such as Memcheck, which identifies memory errors, Cachegrind, Massif, Hellgrind, Callgrind and many other tools. 
+
+
+
+
+
+
+
+
 
 ---
