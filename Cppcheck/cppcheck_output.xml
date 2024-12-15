@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="2.13.0"/>
+    <errors>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;algorithm&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;algorithm&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="simpleGraphs.hpp" line="4" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;cmath&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;cmath&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="simpleGraphs.hpp" line="5" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;exception&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;exception&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="simpleGraphs.hpp" line="5" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;filesystem&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;filesystem&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="simpleGraphs.hpp" line="7" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;fstream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;fstream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="simpleGraphs.hpp" line="8" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;functional&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;functional&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="simpleGraphs.hpp" line="9" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;iostream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="simpleGraphs.hpp" line="10" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;optional&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;optional&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="simpleGraphs.hpp" line="11" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;queue&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;queue&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="simpleGraphs.hpp" line="12" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;set&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;set&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="simpleGraphs.hpp" line="13" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;sstream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;sstream&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="simpleGraphs.hpp" line="14" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;stack&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;stack&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="simpleGraphs.hpp" line="15" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;tuple&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;tuple&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="simpleGraphs.hpp" line="16" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;type_traits&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;type_traits&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="simpleGraphs.hpp" line="17" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;unordered_map&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;unordered_map&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="simpleGraphs.hpp" line="18" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;unordered_set&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;unordered_set&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="simpleGraphs.hpp" line="19" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;utility&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;utility&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="simpleGraphs.hpp" line="20" column="0"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &lt;vector&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &lt;vector&gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="simpleGraphs.hpp" line="21" column="0"/>
+        </error>
+        <error id="noExplicitConstructor" severity="style" msg="Class &apos;SimpleGraphsException&apos; has a constructor with 1 argument that is not explicit." verbose="Class &apos;SimpleGraphsException&apos; has a constructor with 1 argument that is not explicit. Such, so called &quot;Converting constructors&quot;, should in general be explicit for type safety reasons as that prevents unintended implicit conversions." cwe="398" file0="simpleGraphs.hpp">
+            <location file="simpleGraphs.hpp" line="46" column="13"/>
+            <symbol>SimpleGraphsException</symbol>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;newGraphDirections==GraphClasses::GraphDirections::Undirected&apos; is always false" verbose="Condition &apos;newGraphDirections==GraphClasses::GraphDirections::Undirected&apos; is always false" cwe="570" file0="simpleGraphs.hpp">
+            <location file="simpleGraphs.hpp" line="1448" column="48" info="Condition &apos;newGraphDirections==GraphClasses::GraphDirections::Undirected&apos; is always false"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;isUndirected&apos; is always false" verbose="Condition &apos;isUndirected&apos; is always false" cwe="570" file0="simpleGraphs.hpp">
+            <location file="simpleGraphs.hpp" line="1461" column="10" info="Condition &apos;isUndirected&apos; is always false"/>
+            <location file="simpleGraphs.hpp" line="1448" column="48" info="Assignment &apos;isUndirected=newGraphDirections==GraphClasses::GraphDirections::Undirected&apos;, assigned value is 0"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &apos;isUndirected&apos; is always false" verbose="Condition &apos;isUndirected&apos; is always false" cwe="570" file0="simpleGraphs.hpp">
+            <location file="simpleGraphs.hpp" line="1468" column="10" info="Condition &apos;isUndirected&apos; is always false"/>
+            <location file="simpleGraphs.hpp" line="1448" column="48" info="Assignment &apos;isUndirected=newGraphDirections==GraphClasses::GraphDirections::Undirected&apos;, assigned value is 0"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &apos;allTopsorts&apos; can be reduced." verbose="The scope of the variable &apos;allTopsorts&apos; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &apos;i&apos; can be reduced:\012void f(int x)\012{\012    int i = 0;\012    if (x) {\012        // it&apos;s safe to move &apos;int i = 0;&apos; here\012        for (int n = 0; n &lt; 10; ++n) {\012            // it is possible but not safe to move &apos;int i = 0;&apos; here\012            do_something(&amp;i);\012        }\012    }\012}\012When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="simpleGraphs.hpp">
+            <location file="simpleGraphs.hpp" line="4191" column="9"/>
+            <symbol>allTopsorts</symbol>
+        </error>
+        <error id="constVariableReference" severity="style" msg="Variable &apos;val&apos; can be declared as reference to const" verbose="Variable &apos;val&apos; can be declared as reference to const" cwe="398" file0="simpleGraphs.hpp">
+            <location file="simpleGraphs.hpp" line="2389" column="17" info="Variable &apos;val&apos; can be declared as reference to const"/>
+            <symbol>val</symbol>
+        </error>
+        <error id="constVariableReference" severity="style" msg="Variable &apos;node&apos; can be declared as reference to const" verbose="Variable &apos;node&apos; can be declared as reference to const" cwe="398" file0="simpleGraphs.hpp">
+            <location file="simpleGraphs.hpp" line="2965" column="16" info="Variable &apos;node&apos; can be declared as reference to const"/>
+            <symbol>node</symbol>
+        </error>
+        <error id="constVariableReference" severity="style" msg="Variable &apos;node&apos; can be declared as reference to const" verbose="Variable &apos;node&apos; can be declared as reference to const" cwe="398" file0="simpleGraphs.hpp">
+            <location file="simpleGraphs.hpp" line="3997" column="15" info="Variable &apos;node&apos; can be declared as reference to const"/>
+            <symbol>node</symbol>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::find_if algorithm instead of a raw loop." verbose="Consider using std::find_if algorithm instead of a raw loop." cwe="398" file0="simpleGraphs.hpp">
+            <location file="simpleGraphs.hpp" line="3308" column="31"/>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::copy algorithm instead of a raw loop." verbose="Consider using std::copy algorithm instead of a raw loop." cwe="398" file0="simpleGraphs.hpp">
+            <location file="simpleGraphs.hpp" line="4591" column="17"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;configureDirections&apos; is never used." verbose="The function &apos;configureDirections&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="552" column="0"/>
+            <symbol>configureDirections</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;configureWeights&apos; is never used." verbose="The function &apos;configureWeights&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="558" column="0"/>
+            <symbol>configureWeights</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;readFromTxt&apos; is never used." verbose="The function &apos;readFromTxt&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="585" column="0"/>
+            <symbol>readFromTxt</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;exportToTxt&apos; is never used." verbose="The function &apos;exportToTxt&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="642" column="0"/>
+            <symbol>exportToTxt</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;addNodes&apos; is never used." verbose="The function &apos;addNodes&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="664" column="0"/>
+            <symbol>addNodes</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;deleteNodes&apos; is never used." verbose="The function &apos;deleteNodes&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="706" column="0"/>
+            <symbol>deleteNodes</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;reweighEdge&apos; is never used." verbose="The function &apos;reweighEdge&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="773" column="0"/>
+            <symbol>reweighEdge</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getNodeSet&apos; is never used." verbose="The function &apos;getNodeSet&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="878" column="0"/>
+            <symbol>getNodeSet</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getFilteredNodeSet&apos; is never used." verbose="The function &apos;getFilteredNodeSet&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="889" column="0"/>
+            <symbol>getFilteredNodeSet</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getDegreeOfNode&apos; is never used." verbose="The function &apos;getDegreeOfNode&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="902" column="0"/>
+            <symbol>getDegreeOfNode</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getInDegreeOfNode&apos; is never used." verbose="The function &apos;getInDegreeOfNode&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="934" column="0"/>
+            <symbol>getInDegreeOfNode</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getOutDegreeOfNode&apos; is never used." verbose="The function &apos;getOutDegreeOfNode&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="982" column="0"/>
+            <symbol>getOutDegreeOfNode</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getDensity&apos; is never used." verbose="The function &apos;getDensity&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="1014" column="0"/>
+            <symbol>getDensity</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getEccentricityOfNode&apos; is never used." verbose="The function &apos;getEccentricityOfNode&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="1030" column="0"/>
+            <symbol>getEccentricityOfNode</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getRadiusDiameterAndCenter&apos; is never used." verbose="The function &apos;getRadiusDiameterAndCenter&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="1050" column="0"/>
+            <symbol>getRadiusDiameterAndCenter</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;getCircumferenceAndGirth&apos; is never used." verbose="The function &apos;getCircumferenceAndGirth&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="1089" column="0"/>
+            <symbol>getCircumferenceAndGirth</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;isBiconnected&apos; is never used." verbose="The function &apos;isBiconnected&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="1121" column="0"/>
+            <symbol>isBiconnected</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;hasEulerianCycleOrPath&apos; is never used." verbose="The function &apos;hasEulerianCycleOrPath&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="1146" column="0"/>
+            <symbol>hasEulerianCycleOrPath</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;complementOfGraph&apos; is never used." verbose="The function &apos;complementOfGraph&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="1171" column="0"/>
+            <symbol>complementOfGraph</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;constructCompleteGraphFromNodes&apos; is never used." verbose="The function &apos;constructCompleteGraphFromNodes&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="1202" column="0"/>
+            <symbol>constructCompleteGraphFromNodes</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;mergeGraphs&apos; is never used." verbose="The function &apos;mergeGraphs&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="1294" column="0"/>
+            <symbol>mergeGraphs</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;transitiveClosureOfGraph&apos; is never used." verbose="The function &apos;transitiveClosureOfGraph&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="1343" column="0"/>
+            <symbol>transitiveClosureOfGraph</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;transitiveReductionOfGraph&apos; is never used." verbose="The function &apos;transitiveReductionOfGraph&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="1388" column="0"/>
+            <symbol>transitiveReductionOfGraph</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;breadthFirstSearch&apos; is never used." verbose="The function &apos;breadthFirstSearch&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="1483" column="0"/>
+            <symbol>breadthFirstSearch</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;breadthFirstTraverse&apos; is never used." verbose="The function &apos;breadthFirstTraverse&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="1533" column="0"/>
+            <symbol>breadthFirstTraverse</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;depthFirstSearch&apos; is never used." verbose="The function &apos;depthFirstSearch&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="1581" column="0"/>
+            <symbol>depthFirstSearch</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;dijkstraShortestPath&apos; is never used." verbose="The function &apos;dijkstraShortestPath&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="1896" column="0"/>
+            <symbol>dijkstraShortestPath</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;johnsonAllShortestsPaths&apos; is never used." verbose="The function &apos;johnsonAllShortestsPaths&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="2061" column="0"/>
+            <symbol>johnsonAllShortestsPaths</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;shortestPathFasterAlgorithm&apos; is never used." verbose="The function &apos;shortestPathFasterAlgorithm&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="2152" column="0"/>
+            <symbol>shortestPathFasterAlgorithm</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;findBridges&apos; is never used." verbose="The function &apos;findBridges&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="2306" column="0"/>
+            <symbol>findBridges</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;allTopsorts&apos; is never used." verbose="The function &apos;allTopsorts&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="2349" column="0"/>
+            <symbol>allTopsorts</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;dfsTopsort&apos; is never used." verbose="The function &apos;dfsTopsort&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="2405" column="0"/>
+            <symbol>dfsTopsort</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;khanTopsort&apos; is never used." verbose="The function &apos;khanTopsort&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="2471" column="0"/>
+            <symbol>khanTopsort</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;boruvkaMinimumSpanningTree&apos; is never used." verbose="The function &apos;boruvkaMinimumSpanningTree&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="2538" column="0"/>
+            <symbol>boruvkaMinimumSpanningTree</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;commonMinimumCostSpannigTree&apos; is never used." verbose="The function &apos;commonMinimumCostSpannigTree&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="2637" column="0"/>
+            <symbol>commonMinimumCostSpannigTree</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;primMinimumSpanningTree&apos; is never used." verbose="The function &apos;primMinimumSpanningTree&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="2724" column="0"/>
+            <symbol>primMinimumSpanningTree</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;reverseDeleteMinimumSpanningTree&apos; is never used." verbose="The function &apos;reverseDeleteMinimumSpanningTree&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="2820" column="0"/>
+            <symbol>reverseDeleteMinimumSpanningTree</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;kosarajuFindStronglyConnectedComponents&apos; is never used." verbose="The function &apos;kosarajuFindStronglyConnectedComponents&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="2978" column="0"/>
+            <symbol>kosarajuFindStronglyConnectedComponents</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;tarjanFindBiconnectedComponents&apos; is never used." verbose="The function &apos;tarjanFindBiconnectedComponents&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="3101" column="0"/>
+            <symbol>tarjanFindBiconnectedComponents</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;edmondsKarpMaximumFlow&apos; is never used." verbose="The function &apos;edmondsKarpMaximumFlow&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="3359" column="0"/>
+            <symbol>edmondsKarpMaximumFlow</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;pushRelabelMaximumFlow&apos; is never used." verbose="The function &apos;pushRelabelMaximumFlow&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="3469" column="0"/>
+            <symbol>pushRelabelMaximumFlow</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;hierholzerFindEulerianPath&apos; is never used." verbose="The function &apos;hierholzerFindEulerianPath&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="3685" column="0"/>
+            <symbol>hierholzerFindEulerianPath</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;countTriangles&apos; is never used." verbose="The function &apos;countTriangles&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="3739" column="0"/>
+            <symbol>countTriangles</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;findIsolatedNodes&apos; is never used." verbose="The function &apos;findIsolatedNodes&apos; is never used." cwe="561">
+            <location file="simpleGraphs.hpp" line="3797" column="0"/>
+            <symbol>findIsolatedNodes</symbol>
+        </error>
+        <error id="checkersReport" severity="information" msg="Active checkers: 161/592 (use --checkers-report=&lt;filename&gt; to see details)" verbose="Active checkers: 161/592 (use --checkers-report=&lt;filename&gt; to see details)"/>
+    </errors>
+</results>
