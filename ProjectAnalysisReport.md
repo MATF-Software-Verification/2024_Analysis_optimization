@@ -96,3 +96,22 @@ Library does not contain any memory leak all allocated memory was freed, the err
 Place the script in root of `Simple graphs` and run it. Script will build the project if that is needed and run the tool. After the tool is finished it will output log file which will reperesent the analysis of the said tool.
 
 ---
+
+### [Cppcheck](https://cppcheck.sourceforge.io/)
+
+#### Brief summary of the tool
+
+`Cppcheck` is a static analysis tool for C/C++ code. It provides unique code analysis to detect bugs and focuses on detecting undefined behaviour and dangerous coding constructs. The goal is to have very few false positives.
+
+#### Key results of analysis 
+
+There are a couple of `information` severity regarding missing includes, but CppCheck states that it is not a problem and that CppCheck does not need them to perform analysis.
+
+`Style` severity is tied to all other messages, there is one note about constructor that should be explicit and all ohter messages are about unused functions. 
+
+#### Sugested changes 
+
+Since there was no message with high severity, no breaking error was found.
+All the messages are benign and unused function i would not want to remove from this library since there is possible future development.
+As for the constructor that was noted to be switched to explicit that is the ***that is the only pottentialy bad thing.*** 
+Since the noted constructor has only 1 argument it could potentialy lead to bad behaviour if its left without `explicit`.
