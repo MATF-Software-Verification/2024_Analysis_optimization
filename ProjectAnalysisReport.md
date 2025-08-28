@@ -59,40 +59,45 @@ I've decided to also include small `git pre-commit hook` that will apply **_Lllv
 **_Valgrind, as a base framework_**, provides essential tools for memory debugging, error detection, and performance profiling. It serves as the foundation for specialized utilities such as Memcheck, which identifies memory errors, Cachegrind, Massif, Hellgrind, Callgrind and many other tools.
 
 Two **_Valgrind_** tools that i used are `MemCheck` and `Massif`
+
 ### [Massif](https://valgrind.org/docs/manual/ms-manual.html)
 
 #### Brief summary of the tool
 
 **Massif** is designed for detailed heap memory profiling, focusing on analyzing memory consumption and identifying inefficiencies in applications. It tracks memory usage over time and generates a visual breakdown of heap allocations
 
-#### Way i executed analysis 
+#### Way i executed analysis
 
 I've decided to profile memory in two different instances of running the program:
+
 - Directed graphs
 - Undirected graphs
 
 First and foermost i was looking for memory problems which of which found none, then i decided to see the difference in memory usage between algorithms for Directed graphs and Undirected graphs.
 As expected memory usage for Directed graphs exeecded those of Undirected by around 1/3 more.
 
-#### Usage 
+#### Usage
 
 Take the [massif](./Valgrind/Massif/massif.sh) script and put in root of `Simple graphs` prject run it and if there is no build it will build the project for you.
-Afterwards it will run `Massif` and  generate output file for you. It will instruct you to use `ms_print` for analysis if output file. The pictures i provided are from [online tool](http://boutglay.com/massifjs/) for visualizing memory usage in execution.
+Afterwards it will run `Massif` and generate output file for you. It will instruct you to use `ms_print` for analysis if output file. The pictures i provided are from [online tool](http://boutglay.com/massifjs/) for visualizing memory usage in execution.
 
+#### Reports
+
+- [Directed graph memory usage](./Valgrind/Massif/massif-directed-visual-report.png) - Shows heap allocation peaks around 2.5MB with steady memory usage during graph operations
+- [Undirected graph memory usage](./Valgrind/Massif/massif-undirected-visual-report.png) - Shows lower memory consumption (~1.7MB peak) compared to directed graphs, confirming expected efficiency
 
 ### [MemCheck](https://valgrind.org/docs/manual/quick-start.html)
 
-#### Brief summary of the tool 
+#### Brief summary of the tool
 
-Memcheck is a tool that helps identify memory-related errors in programs, such as memory leaks, invalid accesses, and reads from uninitialized memory. 
+Memcheck is a tool that helps identify memory-related errors in programs, such as memory leaks, invalid accesses, and reads from uninitialized memory.
 
-#### Key results of analysis 
+#### Key results of analysis
 
-Library does not contain any memory leak all allocated memory was freed, the errors that Memcheck noted are all within tests and are related to use of uninitialised value. 
-
+Library does not contain any memory leak all allocated memory was freed, the errors that Memcheck noted are all within tests and are related to use of uninitialised value.
 
 #### Usage
- 
+
 Place the script in root of `Simple graphs` and run it. Script will build the project if that is needed and run the tool. After the tool is finished it will output log file which will reperesent the analysis of the said tool.
 
 ---
@@ -103,15 +108,15 @@ Place the script in root of `Simple graphs` and run it. Script will build the pr
 
 `Cppcheck` is a static analysis tool for C/C++ code. It provides unique code analysis to detect bugs and focuses on detecting undefined behaviour and dangerous coding constructs. The goal is to have very few false positives.
 
-#### Key results of analysis 
+#### Key results of analysis
 
 There are a couple of `information` severity regarding missing includes, but CppCheck states that it is not a problem and that CppCheck does not need them to perform analysis.
 
-`Style` severity is tied to all other messages, there is one note about constructor that should be explicit and all ohter messages are about unused functions. 
+`Style` severity is tied to all other messages, there is one note about constructor that should be explicit and all ohter messages are about unused functions.
 
-#### Sugested changes 
+#### Sugested changes
 
 Since there was no message with high severity, no breaking error was found.
 All the messages are benign and unused function i would not want to remove from this library since there is possible future development.
-As for the constructor that was noted to be switched to explicit that is the ***that is the only pottentialy bad thing.*** 
+As for the constructor that was noted to be switched to explicit that is the **_that is the only pottentialy bad thing._**
 Since the noted constructor has only 1 argument it could potentialy lead to bad behaviour if its left without `explicit`.
